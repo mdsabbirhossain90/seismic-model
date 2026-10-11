@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    env:
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Short end-to-end simulation (padded domain)
+        working-directory: nopml_50km
+        run: python model.py --perturbation 0.05 --corr 6 --t-total 0.3 --snap 0.3 --output-dir /tmp/ci_nopml
+      - name: Anomaly model build
+        working-directory: nopml_50km
+        run: python model.py --anomaly --eps-bg 0.05 --eps-anom 0.09 --corr 6 --geometry-only --output-dir /tmp/ci_anom
+      - name: C-PML model build
+        working-directory: pml_model
+        run: python model.py --geometry-only --output-dir /tmp/ci_pml
