@@ -4,6 +4,7 @@
 
 **A 2D P-SV elastic finite-difference framework for studying how small-scale crustal heterogeneity and localized scattering anomalies shape seismic wavefields, coda, and P-to-S energy conversion.**
 
+[![CI](https://github.com/mdsabbirhossain90/seismic-model/actions/workflows/ci.yml/badge.svg)](https://github.com/mdsabbirhossain90/seismic-model/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-SciPy-013243?logo=numpy&logoColor=white)
 ![Method](https://img.shields.io/badge/method-staggered--grid%20FD%20O(2%2C4)-informational)
