@@ -1,0 +1,28 @@
+Definitions of the numbers in the CSV files (no-PML runs)
+=========================================================
+Table2_4_velocity_stats.csv
+  vp_* / vs_*   min, max, mean and standard deviation of the model inside the
+                40 x 40 km model area (m/s). Case 3 also lists Vp min, max and
+                std inside the anomaly box (18-26 km x 16-24 km).
+
+metrics_summary.csv
+  dt_ms                          time step of the run (ms)
+  ES_over_EP_at_3s               S-energy / P-energy measure in the 40x40 km area at t = 3 s
+                                 (measures proportional to (lambda+2mu)(div v)^2 and mu(curl v)^2)
+  E_area_at_3s_rel_homog         total elastic energy in the 40x40 km area at 3 s,
+                                 divided by the homogeneous value at 3 s
+  <R>_tP_predicted_s             predicted direct P time: 0.31 s + distance / 6000 m/s
+  <R>_direct_peak                peak of |v| = sqrt(vx^2 + vz^2) in tP +/- 0.4 s
+  <R>_direct_peak_rel_homog      the same divided by the homogeneous value
+  <R>_traveltime_shift_ms        delay of the direct P wave relative to the homogeneous run,
+                                 from cross-correlation of vx in tP +/- 0.5 s
+                                 (positive = arrives later than in the homogeneous model)
+  <R>_coda_to_direct_energy      mean |v|^2 in [tP+0.5, tP+1.5] s divided by mean |v|^2 in tP +/- 0.4 s
+  <R>_transverse_fraction_coda   share of vz^2 in that coda window (vx is radial on the receiver line)
+
+metrics_anomaly_vs_background.csv   (Case 3 divided by Case 2.1, same receiver)
+  direct_peak_ratio        peak |v| in tP +/- 0.4 s
+  late_coda_energy_ratio   mean |v|^2 in [tP + 1 s, min(tP + 4 s, first boundary reflection - 0.2 s)]
+  S_energy_ratio           sum of (curl v)^2 at the receiver from tP to the end of that window
+
+All receiver windows end before the first boundary reflection at that receiver.

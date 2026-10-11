@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Seismic Wave Scattering in Random Heterogeneous Media: a 2D P-SV elastic finite-difference framework"
+authors:
+  - alias: mdsabbirhossain90
+repository-code: "https://github.com/mdsabbirhossain90/seismic-model"
+keywords:
+  - seismology
+  - elastic wave propagation
+  - finite difference
+  - seismic scattering
+  - random media
+  - coda waves
+type: software

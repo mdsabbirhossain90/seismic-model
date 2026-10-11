@@ -1,0 +1,4 @@
+receiver,direct_peak_ratio,late_coda_energy_ratio,late_window_s,S_energy_ratio
+A,0.9991,1.273,1.81-4.81,1.193
+B,0.5899,0.9367,2.98-5.98,1.545
+C,1.033,1.429,4.31-7.31,1.541
