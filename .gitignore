@@ -1,0 +1,38 @@
+# ── Python ────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ── Virtual environments ──────────────────────────────
+.venv/
+venv/
+env/
+**/.venv/
+
+# ── Editor / OS ───────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ── Secrets / local config ────────────────────────────
+.env
+.env.*
+*.pem
+*.key
+secrets*
+
+# ── Simulation outputs (large, regenerable) ───────────
+**/results/
+**/outputs/
+**/output/
+**/mc_outputs/
+**/smoke_out*/
+**/test_geom/
+pml_comparison/images/
+*.npz
+*.npy
+
+# ── Local-only archive (duplicates, scratch) ──────────
+_local_archive/
